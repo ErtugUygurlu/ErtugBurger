@@ -1,0 +1,174 @@
+.navbar {
+  background-color: chocolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  max-width: 60px;
+  height: auto;
+  margin-top: -5px;
+  margin-bottom: -9px;
+}
+
+.mainLink {
+  display: flex;
+}
+
+.mainLink>a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-left: 29px;
+  transition: all 0.3s ease;
+  margin-top: -4px;
+  margin-right: 5px;
+}
+
+.mainLink>a:hover {
+  color: #0d643d;
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 768px) {
+  .mainLink {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin: 10px 0;
+  }
+}
+
+
+.mainLink {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainLink a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  margin-left: 29px;
+  transition: all 0.3s ease;
+}
+
+.mainLink a:hover {
+  color: #0d643d;
+  transform: scale(1.2);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+  }
+
+  .mainLink {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: chocolate;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .mainLink a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+
+.menu-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .mainLink {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(210, 105, 30, 0.846);
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .mainLink.open {
+    display: flex;
+  }
+
+  .mainLink a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .logo-container {
+    margin-top: 15px;
+  }
+}

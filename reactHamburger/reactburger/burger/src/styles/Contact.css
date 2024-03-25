@@ -1,0 +1,137 @@
+.contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.leftSide {
+  flex: 1;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.rightSide {
+  flex: 1;
+  padding: 20px;
+}
+
+.rightSide h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: calc(100% - 16px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #f76c6c;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d643d;
+  transform: translateY(-5px);
+}
+
+button .icon {
+  margin-right: 20px;
+}
+
+button .icon:hover {
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+.contact,
+.leftSide,
+.rightSide,
+form,
+label,
+input[type="text"],
+input[type="email"],
+textarea,
+button {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.contact.show,
+.leftSide.show,
+.rightSide.show,
+form.show,
+label.show,
+input[type="text"].show,
+input[type="email"].show,
+textarea.show,
+button.show {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftSide {
+    height: 300px;
+  }
+
+  .rightSide h1 {
+    margin-left: 0;
+  }
+}
+
+.leftSide {
+  flex: 1;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  .leftSide {
+    height: 200px;
+    background-image: url('../assets/burgers.jpg');
+    background-size: contain;
+    background-position: center;
+  }
+}

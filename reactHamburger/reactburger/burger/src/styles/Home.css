@@ -1,0 +1,95 @@
+.mainPage {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.order {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.button {
+    background-color: #037809fe;
+    border: none;
+    color: white;
+    padding: 9px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 110px;
+}
+
+.button:hover {
+    background-color: #35913afe;
+    color: #000000;
+}
+
+.mainPage .banner-image {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .order {
+        top: 30%;
+    }
+
+    .mainPage .order a {
+        font-size: 3vw;
+        padding: 10px 30px;
+        border-radius: 20px;
+    }
+}
+
+.order {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(50%);
+    text-align: center;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .order {
+        bottom: 10px;
+        left: 10px;
+        top: auto;
+        transform: none;
+    }
+}
+
+.mainPage {
+    height: 105vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        position: relative;
+    }
+}
