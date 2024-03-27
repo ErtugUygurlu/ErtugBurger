@@ -19,7 +19,7 @@ function Navbar() {
   return (
     <div className='navbar'>
       <div className='logo-container' onClick={toggleMenu}>
-        <img src={Logo} alt="Logo" className='logo' />
+        <img src={Logo} alt="Logo" className='logo heartbeat' />
       </div>
       <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
