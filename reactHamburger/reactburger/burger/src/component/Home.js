@@ -8,7 +8,7 @@ function Home() {
     <div className='mainPage' style={{ backgroundImage: `url(${ImageBanner})` }}>
       <div className='order'>
         <Link to="/menu" className='button'>
-          Sipariş Verin
+          Menüyü İncele
         </Link>
       </div>
     </div>

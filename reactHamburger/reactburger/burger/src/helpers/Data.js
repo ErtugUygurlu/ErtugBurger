@@ -71,18 +71,18 @@ export const Data = [
     name: 'Chicken Burger',
     image: ChickenImage,
     content: '150 gram tavuk göğsü, cheddar peyniri, marul, domates, turşu, karamelize soğan, ketçap, hardal, yanında kızarmış patates',
-    price: 210,
+    price: 180,
   },
   {
     name: 'Black Bean Burger',
     image: BeanImage,
     content: '150 gram siyah fasulye, cheddar peyniri, marul, domates, turşu, karamelize soğan, ketçap, hardal, yanında kızarmış patates',
-    price: 180,
+    price: 170,
   },
   {
     name: 'BBQ Burger',
     image: BBQImage,
     content: '150 gram dana kıyma, cheddar peyniri, marul, domates, turşu, karamelize soğan, ketçap, hardal, BBQ sos, yanında kızarmış patates',
-    price: 250,
+    price: 210,
   },
 ];
