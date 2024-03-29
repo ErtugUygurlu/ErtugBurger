@@ -1,143 +1,144 @@
 .menu {
-    text-align: center;
-    margin-bottom: 80px;
+  text-align: center;
+  margin-bottom: 80px;
 }
 
 .menuList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(30% - 20px), 1fr));
-    gap: 20px;
-    padding: 0 10px;
-    animation: slideFromTop 4s ease forwards;
-    opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(30% - 20px), 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  animation: slideFromTop 4s ease forwards;
+  opacity: 0;
 }
 
 @keyframes slideFromTop {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menuItem {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    transition: transform 0.3s ease;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease;
 }
 
 
-    .menuItem h1 {
-        font-size: 20px;
-        margin: 0;
-    }
+.menuItem h1 {
+  font-size: 20px;
+  margin: 0;
+}
 
-    .menuItem h6 {
-        font-size: 14px;
-        color: #666666;
-        margin-top: 20px;
-    }
+.menuItem h6 {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 20px;
+}
 
-    .menuItem p {
-        font-size: 16px;
-        margin-top: 20px;
-        color: red;
-        font-weight: bold;
-    }
+.menuItem p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: red;
+  font-weight: bold;
+}
 
 
-    .menuItem div {
-        width: 100%;
-        height: 150px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
+.menuItem div {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
 
 .menuList {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 40px), 1fr));
-    gap: 20px;
-    padding: 0 10px;
-    animation: slideFromTop 4s ease forwards;
-    opacity: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(100% - 40px), 1fr));
+  gap: 20px;
+  padding: 0 10px;
+  animation: slideFromTop 4s ease forwards;
+  opacity: 0;
 }
 
 @media only screen and (min-width: 600px) {
-    .menuList {
-        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
-    }
+  .menuList {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
+  }
 }
 
 @media only screen and (min-width: 900px) {
-    .menuList {
-        grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 13.33px), 1fr));
-    }
+  .menuList {
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 13.33px), 1fr));
+  }
 }
 
 .menuItem:hover div {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .menuItem div {
-    width: 100%;
-    height: 150px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .siparis {
-    cursor: pointer;
-    transition: font-size 0.3s;
+  cursor: pointer;
+  transition: font-size 0.3s;
+
 }
 
-    .siparis:hover {
-        font-size: 1.7em;
-    }
+.siparis:hover {
+  font-size: 1.7em;
+}
 
 .cartPanel {
-    position: fixed;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    background-color: #0d643d;
-    padding: 6px;
-    border: 1px solid #ccc;
-    color: #ffffff;
-    border-radius: 5px;
-    max-height: 70vh;
-    overflow-y: auto;
-    font-size: 12px;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background-color: #0d643d;
+  padding: 6px;
+  border: 1px solid #ccc;
+  color: #ffffff;
+  border-radius: 5px;
+  max-height: 70vh;
+  overflow-y: auto;
+  font-size: 12px;
 }
 
 .orderPlacedMessage {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: red;
-    color: white;
-    padding: 6px;
-    border-radius: 5px;
-    font-size: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 10px;
 }
 
 .checkoutLink {
-    color: red;
-    cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
-    .checkoutLink:hover {
-        text-decoration: underline;
-    }
+.checkoutLink:hover {
+  text-decoration: underline;
+}
 
 @media only screen and (min-width: 600px) {
-    .cartPanel {
-        max-width: 350px;
-    }
+  .cartPanel {
+    max-width: 350px;
+  }
 }

@@ -5,50 +5,50 @@ import { Data } from '../helpers/Data';
 import MenuItem from './MenuItem';
 
 function Menu() {
-    const [cartTotal, setCartTotal] = useState({ totalItems: 0, totalPrice: 0 });
-    const [orderPlaced, setOrderPlaced] = useState(false);
+  const [cartTotal, setCartTotal] = useState({ totalItems: 0, totalPrice: 0 });
+  const [orderPlaced, setOrderPlaced] = useState(false);
 
-    const addToCart = (price) => {
-        setCartTotal({
-            totalItems: cartTotal.totalItems + 1,
-            totalPrice: cartTotal.totalPrice + price
-        });
-    };
+  const addToCart = (price) => {
+    setCartTotal({
+      totalItems: cartTotal.totalItems + 1,
+      totalPrice: cartTotal.totalPrice + price
+    });
+  };
 
-    const placeOrder = () => {
-        setOrderPlaced(true);
-        setTimeout(() => {
-            setOrderPlaced(false);
-            setCartTotal({ totalItems: 0, totalPrice: 0 });
-        }, 3000);
-    };
+  const placeOrder = () => {
+    setOrderPlaced(true);
+    setTimeout(() => {
+      setOrderPlaced(false);
+      setCartTotal({ totalItems: 0, totalPrice: 0 }); 
+    }, 3000);
+  };
 
 
-    return (
-        <div className='menu'>
-            <h1 className='menuTitle'>Burgerlerimiz</h1>
-            <div className='menuList'>
-                {Data.map((menuItem, index) => {
-                    return (
-                        <MenuItem
-                            image={menuItem.image}
-                            name={menuItem.name}
-                            content={menuItem.content}
-                            price={menuItem.price}
-                            key={index}
-                            addToCart={() => addToCart(menuItem.price)}
-                        />
-                    );
-                })}
-            </div>
-            <div className="cartPanel">
-                <FaShoppingCart />
-                Sepet Bilgisi: Toplam Ürün: {cartTotal.totalItems}, Toplam Fiyat: {cartTotal.totalPrice} TL
-                <p className="checkoutLink" onClick={placeOrder}>Alýþveriþi Tamamla</p>
-            </div>
-            {orderPlaced && <div className="orderPlacedMessage">Sipariþiniz alýnmýþtýr.</div>}
-        </div>
-    );
+  return (
+    <div className='menu'>
+      <h1 className='menuTitle'>Burgerlerimiz</h1>
+      <div className='menuList'>
+        {Data.map((menuItem, index) => {
+          return (
+            <MenuItem
+              image={menuItem.image}
+              name={menuItem.name}
+              content={menuItem.content}
+              price={menuItem.price}
+              key={index}
+              addToCart={() => addToCart(menuItem.price)} 
+            />
+          );
+        })}
+      </div>
+      <div className="cartPanel">
+        <FaShoppingCart />
+        Sepet Bilgisi: Toplam ÃœrÃ¼n: {cartTotal.totalItems}, Toplam Fiyat: {cartTotal.totalPrice} TL
+        <p className="checkoutLink" onClick={placeOrder}>AlÄ±ÅŸveriÅŸi Tamamla</p>
+      </div>
+      {orderPlaced && <div className="orderPlacedMessage">SipariÅŸiniz alÄ±nmÄ±ÅŸtÄ±r.</div>}
+    </div>
+  );
 }
 
 export default Menu;
