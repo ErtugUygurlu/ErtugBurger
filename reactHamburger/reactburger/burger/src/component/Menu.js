@@ -23,6 +23,10 @@ function Menu() {
     }, 3000);
   };
 
+  const cancelOrder = () => {
+    setCartTotal({ totalItems: 0, totalPrice: 0 });
+    setOrderPlaced(false);
+  };
 
   return (
     <div className='menu'>
@@ -45,8 +49,11 @@ function Menu() {
         <FaShoppingCart />
         Sepet Bilgisi: Toplam Ürün: {cartTotal.totalItems}, Toplam Fiyat: {cartTotal.totalPrice} TL
         <p className="checkoutLink" onClick={placeOrder}>Alışverişi Tamamla</p>
+        {orderPlaced && <div className="orderPlacedMessage">Siparişiniz alınmıştır.</div>}
+        {cartTotal.totalItems > 0 && !orderPlaced && (
+          <p className="cancelOrderText" onClick={cancelOrder}>Alışverişi İptal Et</p>
+        )}
       </div>
-      {orderPlaced && <div className="orderPlacedMessage">Siparişiniz alınmıştır.</div>}
     </div>
   );
 }
