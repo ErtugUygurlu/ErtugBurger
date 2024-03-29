@@ -7,6 +7,7 @@ import MenuItem from './MenuItem';
 function Menu() {
   const [cartTotal, setCartTotal] = useState({ totalItems: 0, totalPrice: 0 });
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [orderCancelled, setOrderCancelled] = useState(false);
 
   const addToCart = (price) => {
     setCartTotal({
@@ -26,6 +27,10 @@ function Menu() {
   const cancelOrder = () => {
     setCartTotal({ totalItems: 0, totalPrice: 0 });
     setOrderPlaced(false);
+    setOrderCancelled(true);
+    setTimeout(() => {
+      setOrderCancelled(false);
+    }, 3000);
   };
 
   return (
@@ -50,6 +55,7 @@ function Menu() {
         Sepet Bilgisi: Toplam Ürün: {cartTotal.totalItems}, Toplam Fiyat: {cartTotal.totalPrice} TL
         <p className="checkoutLink" onClick={placeOrder}>Alışverişi Tamamla</p>
         {orderPlaced && <div className="orderPlacedMessage">Siparişiniz alınmıştır.</div>}
+        {orderCancelled && <div className="orderCancelledMessage">Siparişiniz iptal edildi.</div>}
         {cartTotal.totalItems > 0 && !orderPlaced && (
           <p className="cancelOrderText" onClick={cancelOrder}>Alışverişi İptal Et</p>
         )}

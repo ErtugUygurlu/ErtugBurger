@@ -121,7 +121,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
+    background-color: green;
     color: white;
     padding: 6px;
     border-radius: 5px;
@@ -151,3 +151,15 @@
     .cancelOrderText:hover {
         color: red;
     }
+
+.orderCancelledMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 20px;
+}
