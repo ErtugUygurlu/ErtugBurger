@@ -27,9 +27,6 @@
     transition: transform 0.3s ease;
 }
 
-    .menuItem:hover {
-        transform: translateY(-10px);
-    }
 
     .menuItem h1 {
         font-size: 20px;
@@ -91,5 +88,56 @@
     background-position: center;
     border-radius: 10px;
     margin-bottom: 20px;
-    transition: transform 0.3s ease; /* Added transition for smooth scaling */
+    transition: transform 0.3s ease;
+}
+
+.siparis {
+    cursor: pointer;
+    transition: font-size 0.3s;
+}
+
+    .siparis:hover {
+        font-size: 1.7em;
+    }
+
+.cartPanel {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: #0d643d;
+    padding: 6px;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    border-radius: 5px;
+    max-height: 70vh;
+    overflow-y: auto;
+    font-size: 12px;
+}
+
+.orderPlacedMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.checkoutLink {
+    color: red;
+    cursor: pointer;
+}
+
+    .checkoutLink:hover {
+        text-decoration: underline;
+    }
+
+@media only screen and (min-width: 600px) {
+    .cartPanel {
+        max-width: 350px;
+    }
 }
